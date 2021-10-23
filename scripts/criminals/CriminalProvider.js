@@ -1,16 +1,16 @@
-let criminals = []
+let criminalsArray = []
 
 export const useCriminals = () => {
-    return criminals.slice()
+    return criminalsArray.slice()
 }
 
 export const getCriminals = () => {
     return fetch("https://criminals.glassdale.us/criminals")
-        .then(response => response.json())
+        .then(dirtyCriminals => dirtyCriminals.json())
         .then(
-            parsedCriminals => {
-                console.table(parsedCriminals)
-                criminals = parsedCriminals
+            cleanCriminals => {
+                console.table(cleanCriminals)
+                criminalsArray = cleanCriminals
             }
         )
 }
