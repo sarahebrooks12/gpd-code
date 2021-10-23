@@ -1,7 +1,9 @@
 export const Officer = (Object) => {
     return `
         <section>
-        ${Object.name}
+        <ul>
+        <li>${Object.name}</li>
+        </ul>
         </section>
     `
 }
